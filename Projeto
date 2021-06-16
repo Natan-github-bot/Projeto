@@ -1,0 +1,57 @@
+console.log('COMPRA DE BOVINOS');
+console.log('Dados do comprador: CPF:.800900');
+
+var CPF = '800900'
+CPF = prompt('Olá, digite o seu CPF por favor?');
+
+while(CPF!=800900){
+  console.log('Usuario nao encontrado!');
+ CPF = prompt('Tente novamente.');
+}
+
+ if(CPF==800900){
+   console.log('Seja bem vindo.');
+   }else('Usuario nao encontrado');
+
+console.log('Temos quatro especies disponiveis para venda:');
+console.log('Boi, Vaca, Bezerra e Bezerro.');
+var especies = prompt('Digite o tipo desejado.');
+ 
+switch(especies){
+    case 'boi':
+  console.log('O  kilo do boi esta R$ 8.50.');
+  pesoEspecies(8.50)
+  break;
+    case 'vaca':
+  console.log('O kilo da vaca esta R$ 9.00 .');
+  pesoEspecies(9.00)
+  break;
+    case 'bezerro':
+    console.log('O kilo do bezerro esta R$ 7.50.');
+    pesoEspecies(7.50)
+  break;
+    case 'bezerra':
+    console.log('O kilo da bezerra esta R$ 10.00.');
+    pesoEspecies(10.00)
+  break;  
+}
+
+function pesoEspecies(preco){
+  
+  var kilo = prompt('Qual a media de peso desejada? ');
+    console.log('Fica R$ ' + kilo * preco);
+}
+prompt('Deseja prosseguir sua compra?');
+
+console.log('Aceitamos pagamento no cartao de credito ou pix');
+
+var pagamento = prompt('Como deseja pagar?');
+
+if(pagamento=='cartao de credito'){
+ console.log(prompt('Digite o numero do seu cartao'));//numero aleatorio
+ console.log('Ok...pagamento efetuado com sucesso.');
+ console.log('Obrigado por comprar conosco.');
+}else{
+  console.log('Copie e cole nosso pix e realize a transferencia');
+  console.log('Obrigado por comprar conosco.');
+}
